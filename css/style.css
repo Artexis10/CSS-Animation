@@ -4,7 +4,7 @@
 }
 
 body, html {
-    background-image: linear-gradient(-6deg, rgba(0,0,0,0.6225840678068102) 0%, rgba(255,255,255,1) 20%);
+    background-image: linear-gradient(-6deg, rgba(0,0,0,0.6225840678068102) 0%, rgba(255,255,255,1) 20%), url(/img/Background_Laptop_Code.jpg);
     height: 100%;
     font-family: sans-serif;
 }
