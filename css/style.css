@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background-image: linear-gradient(-6deg, rgba(0,0,0,0.6225840678068102) 0%, rgba(255,255,255,1) 20%);
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.homepagepicture {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale();
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 60%);
+    min-width: 100%;
+    min-height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    opacity: 1;
+}
+
+.title_centering{
+    opacity: 1;
+    position: absolute;
+    top: 35%;
+    left: 45.5%;
+    transform: translate(-35%, -46.5%);
+    -ms-transform: translate(-35%, -46.5%);
+    z-index: 1;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    border: 1px solid black;
+    transition: all .2s ease-in-out;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    color:black;
+    background:white;
+    padding:35px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-decoration:none;
+    box-shadow:0 20px 50px rgba(0,0,0,.5);
+    overflow:hidden;
+}
+
+.item1, .item2, .item3 {
+    transition: .5s ease;
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.item1transition:hover .item1{
+    opacity: 1;
+    transform: scale(1.1); 
+}
+
+.item2transition:hover .item2{
+    opacity: 1;
+    transform: scale(1.1); 
+}
+
+.item3transition:hover .item3{
+    opacity: 1;
+    transform: scale(1.1); 
+}
+
+.background_effect:hover .homepagepicture {
+    opacity: 0.25;
+}
+
+.main-content:hover .title {
+    opacity: 0.75;
+}
+
+a span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right,black,white);
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0%{transform:translateX(-100%);}
+    100%{transform:translateX(100%);}
+}
+
+a span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom,black,white);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0%{transform:translateY(-100%);}
+    100%{transform:translateY(100%);}
+}
+
+a span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left,black,white);
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3{
+    0%{transform:translateX(100%);}
+    100%{transform:translateX(-100%);}
+}
+
+a span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top,black,white);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0%{transform:translateY(100%);}
+    100%{transform:translateY(-100%);}
+}
+
+.item1 {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+.item2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.item3 {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+
+:root {
+  
+  /* Set neon color */
+  --neon-text-color: black;
+}
+
+h2 {
+  text-transform: uppercase;
+  animation: flicker 3s infinite alternate;     
+}
+
+h1::-moz-selection {
+  color: var(--neon-text-color);
+}
+
+h1::selection {
+  color: var(--neon-text-color);
+}
+
+h1:focus {
+  outline: none;
+}
+
+/* Animate neon flicker */
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);       
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
